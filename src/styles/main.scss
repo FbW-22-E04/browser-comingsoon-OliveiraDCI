@@ -1,22 +1,91 @@
-// This is where your styles can go :)
-// the existing styles are just a placeholder, feel free to delete :)
-
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body {
-  display: grid;
-  height: 100vh;
-  font-family: sans-serif;
-}
+html {
+  font-size: 62.5%;
+  body {
+    font: normal 1.6rem/1.7 Verdana, sans-serif;
+    height: 100vh;
+    background-color: #fff;
+    display: grid;
+    place-items: center;
 
-main {
-  margin: auto;
-  text-align: center;
-  animation: rota 10s infinite linear;
-}
+    .container {
+      padding: 5rem;
+      height: 100%;
+      width: 100%;
+      display: flex;
 
-@keyframes rota {
-  100% { transform: rotate(360deg) }
+      .countdown,
+      .content {
+        padding: 2.5rem;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .countdown {
+        background: url(https://www.freecodecamp.org/news/content/images/size/w600/2021/06/w-qjCHPZbeXCQ-unsplash.jpg)
+          center/cover fixed no-repeat;
+        width: 35%;
+        display: flex;
+
+        color: #fff;
+        font-size: 2rem;
+
+        ul {
+          list-style: none;
+
+          li {
+            display: flex;
+
+            span {
+              font-weight: bold;
+              padding: 0 1rem;
+              text-align: center;
+            }
+          }
+        }
+      }
+
+      .content {
+        position: relative;
+        width: 65%;
+
+        background-color: #ada6a6a8;
+        flex-direction: column;
+        align-items: start;
+        gap: 2rem;
+
+        p {
+          color: #444;
+        }
+
+        button {
+          margin-top: 0.5rem;
+          padding: 1rem 2.5rem;
+          font-weight: bold;
+          background-color: #f1759fcc;
+          color: #fff;
+          letter-spacing: 1.4px;
+          border-radius: 5px;
+          &:hover {
+            cursor: pointer;
+          }
+        }
+
+        .social {
+          position: absolute;
+          margin: 2.5rem;
+          padding: 0.5rem 2rem;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+  }
 }
